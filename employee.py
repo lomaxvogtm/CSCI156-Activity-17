@@ -1,7 +1,6 @@
 __author__ = 'Madeleine'
-
-
 from ss import *
+
 
 class Employee:
     def __init__(self, last=None, first=None, start=None, pay_rate=None, social=None):
@@ -9,14 +8,14 @@ class Employee:
             self.last = input('Last name: ').title()
             self.first = input('First name: ').title()
             self.start = input('Start: ').title()
-            self.pay_rate= float(input("Pay rate: "))
+            self.pay_rate = float(input("Pay rate: "))
             self.social = SS()
         else:
             self.first = first
             self.last = last
             self.start = start
             self.pay_rate = pay_rate
-            self.social = social
+            self.social = SS(social)
 
 
     def __str__(self):
@@ -24,6 +23,3 @@ class Employee:
                "\n" + "Start: " + (self.start) + "\n" + "Pay rate: " + str(self.pay_rate)\
                + "\n" + "Social Security number: " + str(self.social)
 
-
-employeeprint = Employee()
-print(employeeprint)

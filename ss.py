@@ -7,11 +7,16 @@ class SS:
     class InvalidSocial(ValueError):
         pass
 
-    def __init(self):
-        self.social = self.getsocial
+    def __init__(self, ss=None):
+        if ss is None:
+            self.getsocial()
+        else:
+            self.ss = ss
+
+    def __str__(self):
+        return self.ss
 
     def validatess(self):
-        self.ss = input("Input your social security number: ")
         try:
             area, group, serial = self.ss.split("-")
             if "666" in area:
